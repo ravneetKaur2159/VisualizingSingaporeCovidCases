@@ -218,10 +218,10 @@ function incrementDates(){
     dates.setDate(dates.getDate() + 1);
     if(dates.getMonth() == 0){
         month = "January";
-    }else if(dates.getMonth() == 2){
+    }else if(dates.getMonth() == 1){
         month  = "Feburary";
     }
-    else if(dates.getMonth() == 3){
+    else if(dates.getMonth() == 2){
         month  = "March";
     }
     d3.select(".timeDisplay").text(month + "  " + dates.getDate() + "  2020");
@@ -265,9 +265,9 @@ function incrementDates(){
     }
     force.resume();
     // Run it again in a few seconds.
-    if(i==110) return;
+    if(i==52) return;
 
-    //timeout = setTimeout(incrementDates, 800);
+    timeout = setTimeout(incrementDates, 100);
 
 }
 
@@ -295,13 +295,12 @@ function timer() {
     // Run it again in a few seconds.
     if(i==11) return;
 
-    timeout = setTimeout(timer, 500);
+    // timeout = setTimeout(timer, 500);
 }
 
 // timeout = setTimeout(timer, 100);
 
 // timer(i);
-
 
 
 //
