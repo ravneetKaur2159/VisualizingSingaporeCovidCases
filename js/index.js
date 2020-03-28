@@ -267,7 +267,7 @@ function incrementDates(){
     // Run it again in a few seconds.
     if(i==110) return;
 
-    timeout = setTimeout(incrementDates, 800);
+    //timeout = setTimeout(incrementDates, 800);
 
 }
 
