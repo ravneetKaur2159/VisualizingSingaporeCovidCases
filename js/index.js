@@ -1,6 +1,6 @@
-var margin = {top: 16, right: 0, bottom: 0, left: 0},
+var margin = {top: -60, right: 0, bottom: 0, left: 0},
     width = 1050 - margin.left - margin.right,
-    height = 700 - margin.top - margin.bottom;
+    height = 500 - margin.top - margin.bottom;
 
 var first100Cases = [
     ["22-01-2020", "23-01-2020","19-02-2020"],
@@ -151,9 +151,6 @@ var gridline3 = d3.select(".graphClass")
             .attr("stroke-width", 1)
             .style("opacity", 1);
 
-d3.select(".admission")
-    .attr("x", 200.33)
-    .attr("y", 120)
 
 // Foci
 var foci = {
@@ -181,7 +178,7 @@ var force = d3.layout.force()
 	.size([width, height])
 	.gravity(0)
 	.charge(0)
-	.friction(.91)
+	.friction(.65)
 	.on("tick", tick)
 	.start();
     
@@ -267,7 +264,7 @@ function incrementDates(){
     // Run it again in a few seconds.
     if(i==52) return;
 
-    timeout = setTimeout(incrementDates, 600);
+    timeout = setTimeout(incrementDates, 400);
 
 }
 

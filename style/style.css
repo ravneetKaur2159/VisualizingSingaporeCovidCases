@@ -43,8 +43,12 @@ h1{
 }
 
 .timeDisplay{
-	border:solid;
-	width:15%
+	/* width:15%; */
+	margin: 0 auto;
+	text-align:center;
+	font-family: monospace;
+	font-size: 25px;
+	padding:1em;
 }
 
 
